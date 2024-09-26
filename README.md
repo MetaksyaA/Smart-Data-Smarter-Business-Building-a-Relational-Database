@@ -18,12 +18,6 @@ The database schema consists of multiple interconnected tables representing vari
 
 
 
-## How to Use the Queries
-
-### Clone the repository:
-```bash
-git clone https://github.com/yourusername/aesthetic-center-database.git
-
 
 ## Database Setup:
 Ensure your database is set up according to the schema in the diagram. The schema includes tables like Clients, Services, Specialists, Reservations, Payments, and others.
@@ -38,45 +32,4 @@ The queries are designed to provide insight into different aspects of the busine
 Feel free to contribute to this repository by forking it, making changes, and submitting a pull request. Contributions can include:
 ## SQL Queries
 
-This project includes a series of SQL queries to help analyze business operations. Below are some key queries.
-
-### 1. Reservations with Client, Service, Specialist, and Branch Details
-```sql
-SELECT
-    r.reservation_id,
-    CONCAT(c.first_name, ' ', c.last_name) AS client,
-    srv.service_name,
-    CONCAT(sp.first_name, ' ', sp.last_name) AS specialist,
-    b.branch_name,
-    r.reservation_date,
-    r.reservation_time,
-    r.reservation_status
-FROM
-    Reservations r
-JOIN Clients c ON r.client_id = c.client_id
-JOIN Services srv ON r.service_id = srv.service_id
-JOIN Specialists sp ON r.specialist_id = sp.specialist_id
-JOIN Branches b ON r.branch_id = b.branch_id
-ORDER BY r.reservation_date DESC;
-
-
-### 2. Client Feedback on Services
-```sql
-
-SELECT 
-    f.feedback_id, 
-    CONCAT(c.first_name, ' ', c.last_name) AS client,
-    s.service_name, 
-    CONCAT(sp.first_name, ' ', sp.last_name) AS specialist, 
-    f.rating, 
-    f.feedback_comments
-FROM Feedbacks f
-JOIN Clients c ON f.client_id = c.client_id
-JOIN Services s ON f.service_id = s.service_id
-JOIN Specialists sp ON f.specialist_id = sp.specialist_id;
-
-
-
-## Additional queries.
-Improvements to the schema.
-Bug fixes or performance optimizations.
+This project includes a series of SQL queries to help analyze business operations. 
