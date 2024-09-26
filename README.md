@@ -16,6 +16,26 @@ The database schema consists of multiple interconnected tables representing vari
 - **Insurance and Claims**: Handle insurance policies and claims associated with client appointments.
 - **Feedback**: Collect and analyze feedback for services provided.
 
+
+
+## How to Use the Queries
+
+### Clone the repository:
+```bash
+git clone https://github.com/yourusername/aesthetic-center-database.git
+
+
+## Database Setup:
+Ensure your database is set up according to the schema in the diagram. The schema includes tables like Clients, Services, Specialists, Reservations, Payments, and others.
+
+## Run Queries:
+Use a SQL client to run the queries. Modify the queries if needed based on your branch, date, or other specific data needs.
+
+## Analyze Results:
+The queries are designed to provide insight into different aspects of the business, such as reservation trends, client feedback, specialist availability, and financial summaries.
+
+## Contribution
+Feel free to contribute to this repository by forking it, making changes, and submitting a pull request. Contributions can include:
 ## SQL Queries
 
 This project includes a series of SQL queries to help analyze business operations. Below are some key queries.
@@ -56,24 +76,6 @@ JOIN Services s ON f.service_id = s.service_id
 JOIN Specialists sp ON f.specialist_id = sp.specialist_id;
 
 
-## How to Use the Queries
-
-### Clone the repository:
-```bash
-git clone https://github.com/yourusername/aesthetic-center-database.git
-
-
-## Database Setup:
-Ensure your database is set up according to the schema in the diagram. The schema includes tables like Clients, Services, Specialists, Reservations, Payments, and others.
-
-## Run Queries:
-Use a SQL client to run the queries. Modify the queries if needed based on your branch, date, or other specific data needs.
-
-## Analyze Results:
-The queries are designed to provide insight into different aspects of the business, such as reservation trends, client feedback, specialist availability, and financial summaries.
-
-## Contribution
-Feel free to contribute to this repository by forking it, making changes, and submitting a pull request. Contributions can include:
 
 ## Additional queries.
 Improvements to the schema.
